@@ -30,33 +30,29 @@ Menu::macro('adminlteDefaultMenu', function ($content) {
 
 Menu::macro('sidebar', function () {
     return Menu::adminlteMenu()
-        ->add(Html::raw('HEADER')->addParentClass('header'))
-        ->action('HomeController@index', '<i class="fa fa-home"></i><span>Home</span>')
-        ->link('http://www.acacha.org', Menu::adminlteDefaultMenu('Another link'))
-//        ->url('http://www.google.com', 'Google')
-        ->add(Menu::adminlteSeparator('Acacha Adminlte'))
-        #adminlte_menu
-        ->add(Menu::adminlteSeparator('SECONDARY MENU'))
-        ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-share"></i><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>')
+        ->add(Html::raw('Menú')->addParentClass('header'))
+        
+        ->action('HomeController@index', '<i class="fa fa-home"></i><span>INICIO</span>')
+
+        ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-user-o"></i><span>USUARIOS</span> <i class="fa fa-angle-left pull-right"></i></a>')
             ->addParentClass('treeview')
-            ->add(Link::to('/link1', 'Link1'))->addClass('treeview-menu')
-            ->add(Link::to('/link2', 'Link2'))
-            ->url('http://www.google.com', 'Google')
-            ->add(Menu::new()->prepend('<a href="#"><span>Multilevel 2</span> <i class="fa fa-angle-left pull-right"></i></a>')
-                ->addParentClass('treeview')
-                ->add(Link::to('/link21', 'Link21'))->addClass('treeview-menu')
-                ->add(Link::to('/link22', 'Link22'))
-                ->url('http://www.google.com', 'Google')
-            )
+            ->add(Link::to('/link1', 'Registrar'))->addClass('treeview-menu')
+            ->add(Link::to('/link2', 'Consultar'))
         )
-//        ->add(
-//            Menu::fullsubmenuexample()
-//        )
-//        ->add(
-//            Menu::adminlteSubmenu('Best menu')
-//                ->add(Link::to('/acacha', 'acacha'))
-//                ->add(Link::to('/profile', 'Profile'))
-//                ->url('http://www.google.com', 'Google')
-//        )
+            ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-thermometer-full"></i><span>GESTIÓN DIARIA</span> <i class="fa fa-angle-left pull-right"></i></a>')
+            ->addParentClass('treeview')
+            ->add(Link::to('/link1', 'Registrar'))->addClass('treeview-menu')
+            ->add(Link::to('/link2', 'Consultar'))
+            ->add(Link::to('/link2', 'Reportes'))
+        )
+        ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-exclamation"></i><span>BITÁCORA</span> <i class="fa fa-angle-left pull-right"></i></a>')
+            ->addParentClass('treeview')
+            ->add(Link::to('/link1', 'Registrar'))->addClass('treeview-menu')
+            ->add(Link::to('/link2', 'Certificar'))
+            ->add(Link::to('/link1', 'Aprobar'))
+            ->add(Link::to('/link2', 'Reportes'))
+        )
+
+
         ->setActiveFromRequest();
 });

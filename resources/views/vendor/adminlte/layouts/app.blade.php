@@ -35,7 +35,7 @@ desired effect
 
     @include('adminlte::layouts.partials.mainheader')
 
-    @include('adminlte::layouts.partials.sidebar')
+    @include('adminlte::layouts.partials.sidebar_with_spatie_menu')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -58,6 +58,8 @@ desired effect
 @section('scripts')
     @include('adminlte::layouts.partials.scripts')
 @show
+
+@yield('script')
 
 </body>
 </html>
