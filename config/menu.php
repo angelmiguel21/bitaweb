@@ -36,8 +36,8 @@ Menu::macro('sidebar', function () {
 
         ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-user-o"></i><span>USUARIOS</span> <i class="fa fa-angle-left pull-right"></i></a>')
             ->addParentClass('treeview')
-            ->add(Link::to('/link1', 'Registrar'))->addClass('treeview-menu')
-            ->add(Link::to('/link2', 'Consultar'))
+            ->add(Link::to('admin/users', 'Registrar'))->addClass('treeview-menu')
+            ->add(Link::to('/usuario', 'Consultar'))
         )
             ->add(Menu::new()->prepend('<a href="#"><i class="fa fa-thermometer-full"></i><span>GESTIÓN DIARIA</span> <i class="fa fa-angle-left pull-right"></i></a>')
             ->addParentClass('treeview')

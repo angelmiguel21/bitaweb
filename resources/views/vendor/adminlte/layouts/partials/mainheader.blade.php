@@ -50,7 +50,6 @@
                         <li class="footer"><a href="#">c</a></li>
                     </ul>
                 </li><!-- /.messages-menu -->
-
                 <!-- Notifications Menu -->
                 <li class="dropdown notifications-menu">
                     <!-- Menu toggle button -->
@@ -165,10 +164,10 @@
                     </li>
                 @endif
 
-                <!-- Control Sidebar Toggle Button -->
+                <!-- Control Sidebar Toggle Button 
                 <li>
                     <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </nav>

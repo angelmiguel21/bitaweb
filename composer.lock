@@ -1208,16 +1208,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.29",
+            "version": "v5.5.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c58b6ff96fb56cc92e24545870be13cdcfcbc43a"
+                "reference": "a47b50a5981c0cf0139939dfaea4191784b65acb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c58b6ff96fb56cc92e24545870be13cdcfcbc43a",
-                "reference": "c58b6ff96fb56cc92e24545870be13cdcfcbc43a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a47b50a5981c0cf0139939dfaea4191784b65acb",
+                "reference": "a47b50a5981c0cf0139939dfaea4191784b65acb",
                 "shasum": ""
             },
             "require": {
@@ -1338,7 +1338,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-01-15T14:07:47+00:00"
+            "time": "2018-01-16T15:39:45+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2651,16 +2651,16 @@
         },
         {
             "name": "prettus/l5-repository",
-            "version": "2.6.30",
+            "version": "2.6.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "e70bb0da553024836c1a27946de274b995a589b6"
+                "reference": "c328a0a7de4e98716b7bda238a058be1092fbffb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/e70bb0da553024836c1a27946de274b995a589b6",
-                "reference": "e70bb0da553024836c1a27946de274b995a589b6",
+                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/c328a0a7de4e98716b7bda238a058be1092fbffb",
+                "reference": "c328a0a7de4e98716b7bda238a058be1092fbffb",
                 "shasum": ""
             },
             "require": {
@@ -2710,7 +2710,7 @@
                 "model",
                 "repository"
             ],
-            "time": "2018-01-13T16:21:44+00:00"
+            "time": "2018-01-16T19:14:01+00:00"
         },
         {
             "name": "prettus/laravel-validation",
