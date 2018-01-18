@@ -261,7 +261,7 @@
               </div>
               <div class="modal-body">
                 <form action="" class="form-horizontal" id="añadir">
-
+                  <input type="hidden" name="_token" value="{{csrf_token()}}" />
                 <input type="text" id="id_bita" hidden="hidden" value="{{$bit->id}}">
                   <div class="form-group" id="hticket">
                     <label for="nticket" class="control-label col-sm-4">Número de Ticket:</label>
@@ -338,12 +338,16 @@
   <script type="text/javascript" src="{{asset('plugins/select2.min.js')}}"></script>
   <script type="text/javascript" src="{{asset('js/bootbox.min.js')}}"></script>
 
-<script type="text/javascript">
-
-
+<script type ="">
+  $(document).ready(function(){
+    $.ajaxSetup({
+      headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+    });
+  });
+  
 </script>
   <script type="text/javascript">
-
+    
 
     $(document).ready(function() {
       $.get( "{{URL('/unidades')}}",function(data){
