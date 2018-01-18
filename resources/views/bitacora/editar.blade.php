@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('htmlheader_title')
-	Change Title here!
+	Actualizar
 @endsection
 
 @section('main-content')
@@ -330,9 +330,13 @@
 	</div>
 @endsection
 
-@section('script')
+@section('css')
   <link rel="stylesheet" href="{{asset('plugins/datetimepicker/css/bootstrap-datetimepicker.min.css')}}">
   <link rel="stylesheet" href=" {{asset('plugins/select2.min.css')}} "  />
+@endsection
+
+@section('script')
+
   <script type="text/javascript" src="{{asset('plugins/datetimepicker/js/bootstrap-datetimepicker.js')}}"></script>
   <script type="text/javascript" src="{{asset('plugins/datetimepicker/js/locales/bootstrap-datetimepicker.es.js')}}"></script>
   <script type="text/javascript" src="{{asset('plugins/select2.min.js')}}"></script>
