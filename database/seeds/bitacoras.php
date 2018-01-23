@@ -57,7 +57,7 @@ class bitacoras extends Seeder
 		    ]);
 		    DB::table('certificacions')->insert([    	
 		    	'id_bita'		=>	$id_bita,
-		    	'certificado'	=>	$faker->boolean(50),
+		    	'certificado'	=>	"No",
 		    	'certificado_por' => 1,
 		    	'created_at' => date("Y-m-d H:i:s"),
 		    	'updated_at' => date("Y-m-d H:i:s")

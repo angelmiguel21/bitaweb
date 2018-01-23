@@ -16,7 +16,7 @@ class Bitacoras extends Migration
         Schema::create('bitacoras', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->integer('user_id')->unsigned();
-            $table->string('ticket',50);
+            $table->string('ticket',50)->nullable();
             $table->string('ticketraiz',50)->nullable();
             $table->string('detectado',50);
             $table->string('telrepor',11);
@@ -81,7 +81,7 @@ class Bitacoras extends Migration
         Schema::create('certificacions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_bita')->unsigned();
-            $table->boolean('certificado');
+            $table->string('certificado',2);
             $table->integer('certificado_por')->nullable()->unsigned();
             $table->timestamps();
 

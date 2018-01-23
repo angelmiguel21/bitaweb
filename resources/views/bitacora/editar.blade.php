@@ -118,16 +118,16 @@
               </div>              
             
              
-              @if($bit->certificacion->certificado == "true")
+              @if($bit->certificacion->certificado == "Si")
                   <div class="form-group">
                     <label for="certificado" class="control-label col-md-3" >Certificado:</label>
                       <div class="col-md-3">
-                        <input class="form-control" name="" id="" required value=" {{$bit->certificacion->certificado}} " disabled="disabled">
+                        <input class="form-control" value="{{$bit->certificacion->certificado}}" disabled required >
                         <input type="text" id="certificado" name="certificado" hidden="hidden" value="{{$bit->certificacion->certificado}}">
                       </div>
                     <label for="usuario" class="control-label col-md-3" >Certificado Por:</label>
                       <div class="col-md-3">
-                      <input class="form-control" readonly="readonly" name="certificadopor" id="certificadopor" value=" {{Auth::user()->name}}" disabled="disabled">
+                      <input class="form-control" readonly="readonly" name="certificadopor" id="certificadopor" value=" {{Auth::user()->name}}" disabled>
 
                       </div>
                   </div>
@@ -136,9 +136,9 @@
                   <div class="form-group">
                     <label for="certificado" class="control-label col-md-3" >Certificado:</label>
                       <div class="col-md-3">
-                        <select class="form-control" name="certificado" id="certificado" required" >
-                          <option value="1">Si</option>
-                          <option value="0" selected="selected">No</option>
+                        <select class="form-control" name="certificado" id="certificado" required>
+                          <option value="Si">Si</option>
+                          <option value="No" selected="selected">No</option>
                         </select>
                       </div>
                     <label for="usuario" class="control-label col-md-3" >Certificado Por:</label>
@@ -184,7 +184,7 @@
         <div class="box-body">
           <form action="" class="form-horizontal actual" value="{{$be->evento->id}}">
             <input type="text" hidden="hidden" class="id_evento" id="id_evento" value="{{$be->evento->id}}" >
-            <input type="text" hidden="hidden" id="token" value="{{csrf_token()}}">
+            <input type="text" hidden="hidden" name="token" id="token" value="{{csrf_token()}}">
             <div class="form-group" >
               <label for="tipo_incidencia" class="control-label col-md-3" >Tipo de Incidencia:</label>
                 <div class="col-md-3" >
@@ -345,7 +345,7 @@
 <script type ="">
   $(document).ready(function(){
     $.ajaxSetup({
-      headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+      headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
     });
   });
   
@@ -382,7 +382,6 @@
 
 
       $.get( "{{URL('/incidencia')}}",function(data){
-        console.log(data)
         for(var i=0; i<data.length; i++){
           $("#incidencia").append('<option value="'+data[i].id+'">'+data[i].inci_desc+'</option>');
         }
@@ -409,9 +408,12 @@
       $('.actual').submit(function(e){
         e.preventDefault();
         id = $(this).find(".id_evento").val();
+        console.log(id)
         $('#modalPregunta').modal('show');
            data = $(this).serializeArray()
-        $('#botonactualiza').click(function(){         
+           console.log(data)
+        $('#botonactualiza').click(function(){  
+            console.log(data)       
           var array = ['id " : "' + id]
           for (var i = 0; i < data.length; i++) {
             var name = data[i].name
@@ -440,7 +442,6 @@
           $('#modalEventos').modal('hide')
           e.preventDefault();
             id_bita = $('#id_bita').val();
-            //console.log(id_bita);
             data = $(this).serializeArray()
           $.ajax({
             method: "POST",
@@ -449,7 +450,6 @@
             dataType: "JSON",
           })
             .done(function(data){ /// continuar este desarrollo de esta funcionalidad.
-              //console.log(data)
               location.reload(true);
               alert('Evento agregado');
           }) //cierra ajax
