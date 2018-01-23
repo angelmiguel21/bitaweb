@@ -420,13 +420,15 @@
             var valor = data[i].value
             array.push(name +'" : "'+ valor)
           }
-
           $.ajax({
             method: "POST",
             url: "{{URL('/ajax/evento')}}"+"/"+id,
             data: data,
             dataType: "JSON",
-          }); //cierra ajax
+          })
+          .done(function(data){
+            alert('Evento Actualizado')
+          })
           $('#modalPregunta').modal('hide');
         //        window.location.href = "{{URL('/bitacora')}}"+"/"+id+"/edit"
         }) // cierra el click al boton actualizar
