@@ -1,0 +1,2 @@
+ - debe completar el registro sin la fecha de culminacion
+ - 

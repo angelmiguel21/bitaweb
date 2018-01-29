@@ -52,8 +52,8 @@ class Bitacoras extends Migration
             $table->integer('id_evento')->unsigned();
             $table->dateTime('fec_detect');
             $table->dateTime('fec_repor');
-            $table->dateTime('fec_initicket');
-            $table->dateTime('fec_culmina');
+            $table->dateTime('fec_initicket')->nullable();
+            $table->dateTime('fec_culmina')->nullable();
             $table->timestamps();
 
             $table->foreign('id_bita')->references('id')->on('bitacoras')
