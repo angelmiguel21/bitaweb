@@ -1,6 +1,4 @@
-<?php 
-
-namespace App;
+<?php namespace App;
 
 use Esensi\Model\Contracts\HashingModelInterface;
 use Esensi\Model\Contracts\PurgingModelInterface;
@@ -33,7 +31,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'telefono', 'unidad', 'usuario', 'password_confirmation'];
+    protected $fillable = ['name', 'email', 'password', 'password_confirmation'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -61,9 +59,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         ],
     ];
 
+public function entrustPasswordHash() 
+{
+    $this->password = Hash::make($this->password);
+    $this->forceSave();
 }
 
-
-
-
-
+}

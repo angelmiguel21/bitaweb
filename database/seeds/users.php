@@ -17,7 +17,9 @@ class users extends Seeder
             'password' => bcrypt('rockstars'),
             'unidad' => 'implementación',
             'usuario' => 'mmorei01',
-            'telefono' => 4265186451
+            'telefono' => 4265186451,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
         ]);
 
         $roles = [

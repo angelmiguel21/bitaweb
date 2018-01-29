@@ -10,7 +10,7 @@ return [
     "middleware" => ['web', 'entrust-gui.admin'],
     "unauthorized-url" => '/login',
     "middleware-role" => 'admin',
-    "confirmable" => true,
+    "confirmable" => false,
     "users" => [
       'fieldSearchable' => [],
     ],
