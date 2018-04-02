@@ -42,7 +42,7 @@
                         </div>
                       <label for="telefono" class="control-label col-md-3" >Teléfono:</label>
                         <div class="col-md-3" >
-                        <input class="form-control" name="telefono" id="telefono" required>
+                        <input class="form-control" name="telefono" id="telefono" >
                         </div>
                     </div>
 

@@ -67,6 +67,7 @@ Route::get('/estatus', 'ChartsController@estatus');
 Route::get('/ticket/{ticket}','validationController@ticket');
 
 // data a excel - excel a data
+Route::post('carga/bitacora','ExcelController@carga_bitacora');
 Route::get('/excel/bitacora', 'ExcelController@bitacora');
 
 

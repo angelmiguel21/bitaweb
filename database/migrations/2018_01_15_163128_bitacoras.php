@@ -19,7 +19,7 @@ class Bitacoras extends Migration
             $table->string('ticket',50)->nullable();
             $table->string('ticketraiz',50)->nullable();
             $table->string('detectado',50);
-            $table->string('telrepor',11);
+            $table->string('telrepor',11)->nullable();
             $table->integer('responsable')->unsigned();
             $table->integer('impacto')->unsigned();
             $table->integer('reportado')->unsigned();
